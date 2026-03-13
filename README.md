@@ -58,6 +58,6 @@ CREATE TABLE transacoes (
 
 ## ScreenShots
 
-- <img width="1919" height="995" alt="Captura de tela 2026-03-12 234642" src="https://github.com/user-attachments/assets/3a0ab304-0935-422b-9dad-7dd1bffed34c" />
+<img width="1919" height="995" alt="Captura de tela 2026-03-12 234642" src="https://github.com/user-attachments/assets/3a0ab304-0935-422b-9dad-7dd1bffed34c" />
 
 
