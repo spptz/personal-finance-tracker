@@ -1,0 +1,349 @@
+/* Importando uma fonte moderna do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --largura-historico: 700px;
+    --largura-form: 500px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(130deg, #000000, #020814, #04122a, #07214a);
+    background-size: 300% 300%;
+    animation: fundoAnimado 14s ease infinite;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+@keyframes fundoAnimado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    color: #eef4ff;
+    margin-bottom: 20px;
+    transform: translateX(calc((var(--largura-historico) - var(--largura-form)) / 2));
+}
+
+/* Estilo do Card de Saldo */
+h2 {
+    background: rgba(8, 14, 28, 0.68);
+    backdrop-filter: blur(12px) saturate(135%);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(2, 8, 20, 0.35);
+    color: #8df2b5;
+    margin-bottom: 30px;
+    font-weight: 700;
+    transform: translateX(calc((var(--largura-historico) - var(--largura-form)) / 2));
+}
+
+/* Escondendo a linha horizontal padrão */
+hr {
+    display: none;
+}
+
+/* Estilo do Formulário */
+form {
+    background: rgba(8, 14, 28, 0.68);
+    backdrop-filter: blur(12px) saturate(135%);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(2, 8, 20, 0.35);
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #e9f1ff;
+    text-align: center;
+}
+
+.top-layout {
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.historico-area {
+    flex: 0 0 var(--largura-historico);
+    max-width: var(--largura-historico);
+}
+
+.form-area,
+.grafico-area {
+    flex: 0 0 var(--largura-form);
+    max-width: var(--largura-form);
+}
+
+.historico-area h3 {
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d2e3ff;
+    margin-bottom: 5px;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.12);
+    color: #f5f8ff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Estilo do Botão */
+button {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilos da Tabela */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    background: rgba(8, 14, 28, 0.68);
+    box-shadow: 0 12px 30px rgba(2, 8, 20, 0.35);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(12px) saturate(135%);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+}
+
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#tabelaTransacoes {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(196, 221, 255, 0.2);
+    font-size: 13px;
+    word-break: break-word;
+    color: #edf4ff;
+}
+
+#tabelaTransacoes th:nth-child(1),
+#tabelaTransacoes td:nth-child(1) {
+    width: 14%;
+}
+
+#tabelaTransacoes th:nth-child(2),
+#tabelaTransacoes td:nth-child(2) {
+    width: 26%;
+}
+
+#tabelaTransacoes th:nth-child(3),
+#tabelaTransacoes td:nth-child(3) {
+    width: 18%;
+}
+
+#tabelaTransacoes th:nth-child(4),
+#tabelaTransacoes td:nth-child(4) {
+    width: 12%;
+}
+
+#tabelaTransacoes th:nth-child(5),
+#tabelaTransacoes td:nth-child(5) {
+    width: 16%;
+}
+
+#tabelaTransacoes th:nth-child(6),
+#tabelaTransacoes td:nth-child(6) {
+    width: 14%;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.09);
+    color: #dcecff;
+    font-weight: 600;
+}
+
+/* Cores dinâmicas para os valores */
+.receita-cor {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.despesa-cor {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.btn-excluir {
+    background-color: #e74c3c;
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.btn-excluir:hover {
+    background-color: #c0392b;
+}
+
+/* Container do Gráfico */
+.grafico-container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 560px;
+    background: rgba(8, 14, 28, 0.68);
+    backdrop-filter: blur(12px) saturate(135%);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(2, 8, 20, 0.35);
+    margin-bottom: 30px;
+}
+
+.filtros-grafico {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+#filtroPeriodo,
+#filtroMes,
+#filtroAno {
+    background: rgba(255, 255, 255, 0.12);
+    color: #f5f8ff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color-scheme: dark;
+}
+
+#tipo,
+#categoria {
+    background: rgba(255, 255, 255, 0.12);
+    color: #f5f8ff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color-scheme: dark;
+}
+
+#filtroPeriodo option,
+#filtroMes option,
+#filtroAno option {
+    background-color: #0b1a33;
+    color: #edf4ff;
+}
+
+#tipo option,
+#categoria option {
+    background-color: #0b1a33;
+    color: #edf4ff;
+}
+
+#filtroMes:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    h1, h2 {
+        transform: none;
+    }
+
+    .top-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .historico-area,
+    .form-area,
+    .grafico-area {
+        width: 100%;
+        min-width: 0;
+        max-width: 500px;
+        flex-basis: auto;
+    }
+
+    .grafico-container,
+    form {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grafico-container {
+        min-height: 420px;
+    }
+
+    .filtros-grafico {
+        grid-template-columns: 1fr;
+    }
+}
+
